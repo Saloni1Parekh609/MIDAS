@@ -411,7 +411,7 @@ def eval_mnist():
 
 df = pd.read_csv("/content/drive/MyDrive/MIDAS/Point3/dataset_p3.csv")
 #Add appropriate filepath of "Train" folder to existing filepath 
-df['FilePath'] = "path_to/MIDAS/" + df['FilePath']
+df['FilePath'] = "path_to_mnistTask/" + df['FilePath']
 df = df.sample(frac = 1)
 
 df_train, df_valid = train_test_split(df, test_size=0.25)
