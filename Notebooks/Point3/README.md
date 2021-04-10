@@ -1,6 +1,6 @@
 # Point 3
 
-#### 1. [dataset_p3.csv](./dataset_p3.csv): Has the image location as: “/mnistTask/….”. **Please do not modify this csv.**
+#### 1. [dataset_p3.csv](./dataset_p3.csv): Has the image location as: “/mnistTask/….”. **Please do not modify this csv.** This csv was created using a [pretrained model](https://github.com/Saloni1Parekh609/MIDAS/blob/main/Notebooks/DatasetCreation/DatasetCreation_UsingPretrainedModel.ipynb).
 
 #### 2. [Point3_Finetuning.ipynb](./Point3_Finetuning.ipynb): This file is used to retrain the model on [mnistTask.zip](../mnistTask.zip). Add the appropriate filepath to dataframes and change the filepath of where the model is to be stored. Make sure that the [mnistTask.zip](../mnistTask.zip) folder is unzipped.
 
