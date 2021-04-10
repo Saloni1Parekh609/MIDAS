@@ -16,12 +16,12 @@
 
 <br>
 
-#### 5. [Point 1](https://github.com/Saloni1Parekh609/MIDAS/tree/main/Notebooks/Point1) : Please enter this folder for more information.
+#### 5. [Point 1](./Point1) : Please enter this folder for more information.
 
 <br>
 
-#### 7. [Point 2](https://github.com/Saloni1Parekh609/MIDAS/tree/main/Notebooks/Point2) : Please enter this folder for more information.
+#### 7. [Point 2](./Point2) : Please enter this folder for more information.
 
 <br>
 
-#### 8. [Point 3](https://github.com/Saloni1Parekh609/MIDAS/tree/main/Notebooks/Point3) : Please enter this folder for more information.
+#### 8. [Point 3](./Point3) : Please enter this folder for more information.
