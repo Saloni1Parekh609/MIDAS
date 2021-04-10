@@ -205,7 +205,7 @@ model = smallModel().to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.0001, weight_decay = 1e-4)
 
 #Link to the model: https://drive.google.com/file/d/1TwFAjRqCk433H_Axh-PPms-yZwUuqlEE/view?usp=sharing
-checkpoint = torch.load("/content/drive/MyDrive/MIDAS/Point1/model_encoder_aug.pt")
+checkpoint = torch.load("path_to/model_encoder_aug.pt")
 model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 epoch_last = checkpoint['epoch']
@@ -409,9 +409,9 @@ def eval_mnist():
     print("Classification Report:")
     print(classification_report(y, y_pred))
 
-df = pd.read_csv("/content/drive/MyDrive/MIDAS/Point3/dataset_p3.csv")
+df = pd.read_csv("path_to/MIDAS/ExecutableFiles/Point3/dataset_p3.csv")
 #Add appropriate filepath of "Train" folder to existing filepath 
-df['FilePath'] = "path_to_mnistTask/" + df['FilePath']
+df['FilePath'] = "path_to/MIDAS/ExecutableFiles" + df['FilePath']
 df = df.sample(frac = 1)
 
 df_train, df_valid = train_test_split(df, test_size=0.25)
@@ -432,7 +432,7 @@ images1, labels = val_iter.next()
 print('images shape on batch size = {}'.format(images1.size()))
 print('labels shape on batch size = {}'.format(labels.size()))
 
-testset = datasets.MNIST('/content/drive/MyDrive/MIDAS/Point2/MNIST', download=True, train=False, transform=img_transform)
+testset = datasets.MNIST('path_to/MIDAS/ExecutableFiles/Point2/MNIST', download=True, train=False, transform=img_transform)
 test_loader = torch.utils.data.DataLoader(testset, batch_size=64, shuffle=True)
 
 val_iter = iter(test_loader)

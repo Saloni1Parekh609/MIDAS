@@ -344,7 +344,7 @@ def eval_model():
 df = pd.read_csv("path_to/MIDAS/ExecutableFiles/Point1/pointOne_cpath.csv")
 
 #Add appropriate filepath of "Train" folder to existing filepath 
-df['FilePath'] = "path_to/MIDAS/ExecutableFiles/Point1" + df['FilePath']
+df['FilePath'] = "path_to/MIDAS/ExecutableFiles" + df['FilePath']
 df = df.sample(frac = 1)
 
 df_train, df_valid = train_test_split(df, test_size=0.25) #Split of 75/25

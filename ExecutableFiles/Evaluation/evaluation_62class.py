@@ -74,7 +74,8 @@ class Images_test(Dataset):
 
     return image1, torch.from_numpy(np.array([label], dtype=np.float32)), self.data.iloc[index, 0]
 
-df = pd.read_csv("/content/drive/MyDrive/MIDAS/Point1/pointOne_cpath.csv") #Please add appropriate link
+df = pd.read_csv("/content/drive/MyDrive//MIDAS/ExecutableFiles/Point1/pointOne_cpath.csv") #Please add appropriate link
+df["FilePath"] = "path_to/MIDAS/ExecutableFiles" + df["FilePath"]
 df = df.sample(frac = 1)
 df.head()
 
@@ -166,6 +167,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = smallModel().to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.0001, weight_decay = 1e-4)
 
+#Link to the model: https://drive.google.com/file/d/1TwFAjRqCk433H_Axh-PPms-yZwUuqlEE/view?usp=sharing
 checkpoint = torch.load("/content/drive/MyDrive/MIDAS/Point1/model_encoder_aug.pt")
 model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict'])

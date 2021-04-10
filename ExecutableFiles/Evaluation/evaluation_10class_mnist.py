@@ -134,6 +134,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = smallModel().to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.0001, weight_decay = 1e-4)
 
+#Link to the model: https://colab.research.google.com/drive/1J5_DcgK4IqupfT0j0HlOIsIbE_sPYVzt?usp=sharing
 checkpoint = torch.load("/content/drive/MyDrive/MIDAS/Point3/finetuned_model.pt")
 model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict'])

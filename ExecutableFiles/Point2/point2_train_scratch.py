@@ -39,8 +39,8 @@ img_transform = transforms.Compose([
     ])
 
 #Please change below links accordingly
-trainset = datasets.MNIST('/Users/saloniparekh/Documents/Career/Data Science/MIDAS/Point2', download=True, train=True, transform=img_transform)
-testset = datasets.MNIST('/Users/saloniparekh/Documents/Career/Data Science/MIDAS/Point2', download=True, train=False, transform=img_transform)
+trainset = datasets.MNIST('path_to/MIDAS/Point2', download=True, train=True, transform=img_transform)
+testset = datasets.MNIST('path_to/MIDAS/Point2', download=True, train=False, transform=img_transform)
 
 train_set, val_set = torch.utils.data.random_split(trainset, [50000, 10000]) #Training set is split into training and validation data
 
@@ -155,7 +155,7 @@ print(model)
 def accuracy(out, labels):
     count = 0
     _,pred = torch.max(out, dim=1)
-    for i in range(output.shape[0]):
+    for i in range(out.shape[0]):
       if pred[i] == labels[i]:
         count = count + 1
     return count

@@ -10,9 +10,6 @@ If the notebook is being run on the local system, please download the necessary 
 <font color="blue">*Please change the links accordingly*</font>
 """
 
-from google.colab import drive
-drive.mount('/content/drive')
-
 import numpy as np
 import torch
 import csv
@@ -41,11 +38,11 @@ import os
 # accessing the images from the drive
 
 #Link to the zip file: https://drive.google.com/file/d/1bWjl661Kk3xa8MmdXKHAwsr48080LaQG/view?usp=sharing
-!cp -r "/content/drive/MyDrive/MIDAS/Point3/mnistTask.zip" "/content/mnistTask.zip"
-!unzip mnistTask.zip
+#!cp -r "/content/drive/MyDrive/MIDAS/Point3/mnistTask.zip" "/content/mnistTask.zip"
+#!unzip mnistTask.zip
 
 #To create a csv of all the image filepaths
-path = "/content/mnistTask" #Path to unzipped folder with images
+path = "/path_to/MIDAS/ExecutableFiles/mnistTask" #Path to unzipped folder with images
 df = pd.DataFrame(columns=['FilePath', 'Label'])
 i = 0
 for (root,dirs,files) in os.walk(path, topdown=True):
@@ -65,7 +62,7 @@ df.head()
 print(df.shape)
 df['Label'].value_counts()
 
-df.to_csv('/content/drive/MyDrive/MIDAS/Point3/dataset_p3.csv', index=None) #Please change link accordingly
+df.to_csv('/path_to/MIDAS/ExecutableFiles/Point3/dataset_p3.csv', index=None) #Please change link accordingly
 
 #All images are resized to 200 * 200 and have been normalized
 def _preprocess(image):
@@ -94,7 +91,7 @@ class Images_test(Dataset):
 
     return image1, torch.from_numpy(np.array([label], dtype=np.float32)), self.data.iloc[index, 0]
 
-df = pd.read_csv("/content/drive/MyDrive/MIDAS/Point3/dataset_p3.csv") #please change link accordingly
+df = pd.read_csv("/path_to/MIDAS/ExecutableFiles/Point3/dataset_p3.csv") #please change link accordingly
 df = df.sample(frac = 1)
 df.head()
 
@@ -183,7 +180,7 @@ model = smallModel().to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.0001, weight_decay = 1e-4)
 
 #Link for the model: https://drive.google.com/file/d/1-pztQxLKFb_ZLc0f9tCDXhKgGURJp-4V/view?usp=sharing
-checkpoint = torch.load("/content/drive/MyDrive/MIDAS/Point2/trained_scratch_model.pt")
+checkpoint = torch.load("/path_to/trained_scratch_model.pt")
 model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 epoch_last = checkpoint['epoch']
@@ -218,9 +215,6 @@ df_label["FilePath"] = l1
 df_label["Label"] = l2
 df_label.head()
 
-df_label.to_csv('/content/drive/MyDrive/MIDAS/Point3/dataset_p3.csv', index=None)
+df_label.to_csv('/path_to/MIDAS/ExecutableFiles/Point3/dataset_p3.csv', index=None)
 
-print(df_label.iloc[2, 1])
-img = cv.imread(df_label.iloc[2, 0], cv.IMREAD_GRAYSCALE)
-plt.imshow(img, cmap = "gray") #Predicted: 5
 

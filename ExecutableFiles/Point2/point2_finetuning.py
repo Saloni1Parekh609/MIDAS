@@ -166,7 +166,7 @@ model = model.cuda()
 def accuracy(out, labels):
     count = 0
     _,pred = torch.max(out, dim=1)
-    for i in range(output.shape[0]):
+    for i in range(out.shape[0]):
       if pred[i] == labels[i]:
         count = count + 1
     return count

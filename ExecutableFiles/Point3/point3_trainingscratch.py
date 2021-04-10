@@ -371,9 +371,9 @@ def eval_mnist():
     print("Classification Report:")
     print(classification_report(y, y_pred))
 
-df = pd.read_csv("/content/drive/MyDrive/MIDAS/Point3/dataset_p3.csv")
+df = pd.read_csv("path_to/MIDAS/ExecutableFiles/Point3/dataset_p3.csv")
 #Add appropriate filepath of "Train" folder to existing filepath 
-df['FilePath'] = "path_to/MIDAS/" + df['FilePath']
+df['FilePath'] = "path_to/MIDAS/ExecutableFiles" + df['FilePath']
 df = df.sample(frac = 1)
 
 df_train, df_valid = train_test_split(df, test_size=0.25)
@@ -408,7 +408,7 @@ img_transform = transforms.Compose([
         transforms.Normalize((0.5, ), (0.5,))
     ])
 
-testset = datasets.MNIST('/content/drive/MyDrive/MIDAS/Point2/MNIST', download=True, train=False, transform=img_transform)
+testset = datasets.MNIST('path_to/MIDAS/ExecutableFiles/Point2/MNIST', download=True, train=False, transform=img_transform)
 test_loader = torch.utils.data.DataLoader(testset, batch_size=64, shuffle=True)
 
 val_iter = iter(test_loader)

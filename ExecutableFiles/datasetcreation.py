@@ -29,7 +29,7 @@ import random
 #Unzip file at terminal using the following command:
 #unzip train.zip
 
-path = "path_to_folder/MIDAS/train"
+path = "path_to_folder/MIDAS/ExecutableFiles/train"
 
 def createData():
     df = pd.DataFrame(columns=['FilePath', 'Label'])
@@ -40,7 +40,7 @@ def createData():
           continue
 
         #print(root)
-        files_path = [path + '/' + root[root.find('/train'):] + '/' + i for i in files] #Appropriate path of root to be added before the image filepath
+        files_path = [root + '/' + i for i in files] #Appropriate path of root to be added before the image filepath
         label = [int(root[-2:]) - 1] * len(files_path) #Sample042 -> 42
 
         x = pd.DataFrame(list(zip(files_path, label)), columns=['FilePath', 'Label'])
@@ -67,7 +67,7 @@ def createData():
         for i in lt:
           if i in root:
             #print(root)
-            files_path = [path + '/' + root[root.find('/train'):] + '/' + i for i in files]
+            files_path = [path + root[root.find('/train'):] + '/' + i for i in files]
             label = [int(root[-2:]) - 1] * len(files_path)
 
             x = pd.DataFrame(list(zip(files_path, label)), columns=['FilePath', 'Label'])
