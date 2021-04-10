@@ -10,6 +10,8 @@ To reproduce this environment on the local system:
 
     pip install requirements.txt
 
+Links to the models have been given in their respective cells. However, the list of models is included in [this](./models_path.txt) file. 
+
 ### This repository allows you to execute:
 
 1. [Python Files](https://github.com/Saloni1Parekh609/MIDAS_Task2/tree/main/ExecutableFiles)
