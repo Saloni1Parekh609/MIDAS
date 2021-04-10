@@ -9,7 +9,7 @@
 
 <br>
 
-#### 3. [datasetcreation_usingpretrainedmodel.py](./DatasetCreation/datasetcreation_usingpretrainedmodel.py) : This notebook will create a dataset by using a pretrained model. [Click here for the link to the model](https://drive.google.com/file/d/1-pztQxLKFb_ZLc0f9tCDXhKgGURJp-4V/view?usp=sharing). For task 3 dataset creation, kindly unzip [mnistTask.zip](./mnistTask.zip) and provide the right path for it in this code.
+#### 3. [datasetcreation_usingpretrainedmodel.py](./DatasetCreation/DatasetCreation_UsingPretrainedModel.ipynb) : This notebook will create a dataset by using a pretrained model. [Click here for the link to the model](https://drive.google.com/file/d/1-pztQxLKFb_ZLc0f9tCDXhKgGURJp-4V/view?usp=sharing). For task 3 dataset creation, kindly unzip [mnistTask.zip](./mnistTask.zip) and provide the right path for it in this code.
 
 <br>
 
