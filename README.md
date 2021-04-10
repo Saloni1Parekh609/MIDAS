@@ -50,3 +50,8 @@ Links to the models have been given in their respective cells. However, the list
 
 <hr>
 ### You can also execute this project via Google Colab and access resources from this [Drive](https://drive.google.com/drive/folders/18ZBFPV60wpDRyeerVIH47WZVOUiKJ5IT?usp=sharing) folder. Please add this folder’s shortcut to your drive before going ahead.
+
+### eferences
+
+End-to-End Object Detection with Transformers by FacebookAI: https://arxiv.org/pdf/2005.12872.pdf
+
