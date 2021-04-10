@@ -1,6 +1,6 @@
 # Link to Models
 
-###Compulsorily Used in the Notebooks/Python Files:
+### Compulsorily Used in the Notebooks/Python Files:
 
 **For fine-tuning in point 2:**
 Pretraining_model2.pt: https://drive.google.com/file/d/1iKPCcDfv0Mm-WM5Q1FzaSobhvHF6MIMM/view?usp=sharing
@@ -11,7 +11,7 @@ trained_scratch_model.pt:https://colab.research.google.com/drive/1W_n2OE5CFStZ0_
 **For fine-tuning in point 3:**
 model_encoder_aug.pt: https://drive.google.com/file/d/1TwFAjRqCk433H_Axh-PPms-yZwUuqlEE/view?usp=sharing
 
-###Models that can be used for evaluation:
+### Models that can be used for evaluation:
 
 **Point 1:**
 A. *model_encoder_aug.pt*: https://drive.google.com/file/d/1TwFAjRqCk433H_Axh-PPms-yZwUuqlEE/view?usp=sharing
