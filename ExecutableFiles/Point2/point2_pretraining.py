@@ -339,7 +339,7 @@ F1-Score: 84.33%
 """
 
 #Add correct path of csv
-df = pd.read_csv("/Users/saloniparekh/Documents/Career/Data Science/MIDAS/Point2/one_to_ten.csv") #Please change link accordingly
+df = pd.read_csv("path_to/MIDAS/ExecutableFiles/Point2/one_to_ten.csv") #Please change link accordingly
 
 #Add appropriate filepath of "Train" folder to existing filepath 
 df['FilePath'] = "path_to/MIDAS/" + df['FilePath']
