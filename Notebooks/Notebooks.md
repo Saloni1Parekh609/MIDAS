@@ -5,7 +5,7 @@
 <br>
 
 ### In [Dataset Creation](./DatasetCreation):
-#### 2. [datasetcreation.py](./DatasetCreation/DatasetCreation.py) : This notebook will create a dataset according to the folder structure of the unzipped “train.zip” folder. Kindly provide the right path to this folder. It will also create a csv of filepaths of images with labels 0-9.
+#### 2. [datasetcreation.py](./DatasetCreation/DatasetCreation.ipynb) : This notebook will create a dataset according to the folder structure of the unzipped “train.zip” folder. Kindly provide the right path to this folder. It will also create a csv of filepaths of images with labels 0-9.
 
 <br>
 
