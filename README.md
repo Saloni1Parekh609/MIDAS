@@ -4,7 +4,7 @@
 
 <hr>
 
-A detailed explanation of this entire project is given in [MIDAS_Task2.pdf](./MIDAS_Task2.pdf). All results and explanations are present.
+A detailed explanation of this entire project is given in [MIDAS_Task2.pdf](./MIDAS_Task2.pdf). All results and explanations are present. If possible, please download it for better quality.
 
 To reproduce this environment on the local system:
 
