@@ -73,7 +73,8 @@ class Images_test(Dataset):
 
     return image1, torch.from_numpy(np.array([label], dtype=np.float32)), self.data.iloc[index, 0]
 
-df = pd.read_csv("/Users/saloniparekh/Documents/Career/Data Science/MIDAS/ExecutableFiles/Point2/one_to_ten.csv") #Please add appropriate link
+df = pd.read_csv("/path_to/MIDAS/ExecutableFiles/Point2/one_to_ten.csv") #Please add appropriate link
+df['FilePath'] = "path_to/MIDAS/" + df['FilePath']
 df = df.sample(frac = 1)
 df.head()
 
