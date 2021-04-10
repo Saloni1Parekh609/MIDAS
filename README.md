@@ -10,7 +10,7 @@ To reproduce this environment on the local system:
 
     pip install requirements.txt
 
-Links to the models have been given in their respective cells. However, the list of models is included in [this](./models_path.txt) file. 
+Links to the models have been given in their respective cells. However, the list of models is included in [this](./models_path.md) file. 
 
 ### This repository allows you to execute:
 
